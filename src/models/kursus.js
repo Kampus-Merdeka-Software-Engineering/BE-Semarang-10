@@ -7,7 +7,10 @@ const Kursus = {
   buat: (data, callback) => {
     db.query('INSERT INTO kursus (judul, deskripsi) VALUES (?, ?)', [data.judul, data.deskripsi], callback);
   },
-
+  hapus: (data, callback) => {
+    db.query('DELETE FROM kursus WHERE id = ?', [data.id], callback);
+  },
+  
 };
 
 module.exports = Kursus;
