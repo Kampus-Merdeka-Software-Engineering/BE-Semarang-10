@@ -12,10 +12,10 @@ const db = mysql.createConnection({
 
 db.connect((err) => {
   if (err) {
-    console.error('Koneksi ke MySQL gagal:', err);
+    console.error('Server tidak berhasil terkoneksi ke database MySQL Railway:', err);
     return;
   }
-  console.log('Terhubung ke MySQL');
+  console.log('Server berhasil terkoneksi ke database MySQL Railway');
 });
 
 module.exports = db;

@@ -1,6 +1,7 @@
 const Kursus = require('../models/kursus');
 
 const KursusController = {
+
   tampilkanSemuaKursus: (req, res) => {
     Kursus.semuaKursus((err, hasil) => {
       if (err) {
@@ -65,6 +66,24 @@ const KursusController = {
         return;
       }
       res.status(200).json({ pesan: 'Kursus berhasil dihapus' });
+    });
+  },
+
+  tampilkanKursusByID: (req, res) => {
+    const idKursus = req.params.id;
+
+    Kursus.tampilkanByID(idKursus, (err, hasil) => {
+      if (err) {
+        console.error('Error saat mengambil data kursus:', err);
+        res.status(500).json({ error: 'Kesalahan Internal Server' });
+        return;
+      }
+
+      if (hasil) {
+        res.status(200).json(hasil);
+      } else {
+        res.status(404).json({ error: 'Kursus tidak ditemukan' });
+      }
     });
   },
 
