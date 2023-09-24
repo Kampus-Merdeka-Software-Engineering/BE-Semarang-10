@@ -71,5 +71,4 @@ const KursusController = {
 };
 
 
-
 module.exports = KursusController;
