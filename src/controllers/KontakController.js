@@ -13,7 +13,6 @@ const KontakController = {
     });
   },
   
-
   buatKontak: (req, res) => {
     const { nama, email, pesan } = req.body;
   

@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const kursusRoutes = require('./src/routes/kursusRoutes');
 const kontakRoutes = require('./src/routes/kontakRoutes');
+const berlanggananRoutes = require('./src/routes/berlanggananRoutes');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -12,6 +13,7 @@ app.use(cors());
 
 app.use('/api', kursusRoutes);
 app.use('/api', kontakRoutes);
+app.use('/api', berlanggananRoutes);
 
 app.listen(port, () => {
   console.log(`Server berjalan di port ${port}`);
