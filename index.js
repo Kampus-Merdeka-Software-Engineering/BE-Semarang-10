@@ -5,6 +5,7 @@ const kursusRoutes = require('./src/routes/kursusRoutes');
 const kontakRoutes = require('./src/routes/kontakRoutes');
 const berlanggananRoutes = require('./src/routes/berlanggananRoutes');
 const infoberitaRoutes = require('./src/routes/infoberitaRoutes');
+const unggulanRoutes = require('./src/routes/unggulanRoutes');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -16,6 +17,7 @@ app.use('/api', kursusRoutes);
 app.use('/api', kontakRoutes);
 app.use('/api', berlanggananRoutes);
 app.use('/api', infoberitaRoutes);
+app.use('/api', unggulanRoutes);
 
 app.listen(port, () => {
   console.log(`Server berjalan di port ${port}`);
