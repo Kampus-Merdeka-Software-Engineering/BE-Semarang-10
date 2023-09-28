@@ -6,18 +6,22 @@
     <link rel="icon" href="https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-10/assets/img/logo-icon.png" type="image/png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
     <title>XGROW.DEV</title>
 
     <style>
     /* Global Style */
     html, body { font-family: "Plus Jakarta Sans", sans-serif; background-image: none; margin: 0; padding: 0; text-decoration: none; font-family: Arial, sans-serif; list-style: none; box-sizing: border-box; outline: none; overflow-x: hidden; } h1, h2, h3, h4, h5, h6 { margin-top: 0px; margin-bottom: 0px; } p { font-size: 15px; line-height: 30px; font-weight: 300; color: #afafaf; } ::-webkit-scrollbar { width: 7px; height: auto; } ::-webkit-scrollbar-thumb { background-color: #fdbd58; border-radius: 10px; } ::-webkit-scrollbar-track { background-color: transparent; }
+    table{border-collapse:collapse;width:100%;border-radius:10px;}th,td{border:1px solid #fff;text-align:left;padding:8px;font-size:13px;font-family:"Plus Jakarta Sans",sans-serif;}th{background-color:#fff;color:#fdbd58;text-align:center;}td{color:#fff;}
     /* Navbar Style */
     .navbar{position:fixed;top:0;left:0;z-index:1000;width:100%;height:80px;background-color:#fff;box-shadow:0px 2px 5px rgba(0,0,0,0.1)}.navbar-container{display:flex;justify-content:space-between;align-items:center;height:100%;padding:0 20px;margin:0 auto;max-width:1200px}.navbar-logo{width:200px;height:auto}.navbar-nav{list-style:none;display:flex;margin:0;padding:0}.nav-item{margin-right:5px;padding:10px 10px}.nav-link{text-decoration:none;color:#333;transition:color 0.5s}.nav-link:hover{color:#fdbd58}nav a{color:#333;text-decoration:none}nav a.aktif{color:#fdbd58}.checkbtn{font-size:30px;color:black;float:right;line-height:80px;margin-right:40px;cursor:pointer;display:none}#check{display:none}@media (max-width:768px){.navbar-logo{margin-bottom:20px}.navbar-nav{position:fixed;width:100%;height:100vh;background:#fff;top:80px;left:-120%;text-align:center;transition:all 0.5s;display:block;list-style-type:disc}.nav-item{display:block;margin:20px 0;line-height:30px}.nav-link{padding:0;margin:0;font-size:20px;color:#333}.checkbtn{display:block}nav a.aktif{background:none;color:#fdbd58}#check:checked~ul{left:0}}
-    
     /* home Style */
-    .home{display:flex;align-items:center;padding:150px;background-color:#ffffff;}.home-text{flex:1;padding:20px;}.home-text h1{font-size:42px;font-weight:100;margin:0;}.home-text p{font-size:16px;margin:10px 0;}.home-image{max-width:50%;padding:20px;}.home-image img{max-width:80%;border-radius:10px;}.home-image{position:relative;overflow:hidden;}@media (max-width:768px){.home{padding:150px 0;padding-bottom:200px;}.home-text h1{font-size:36px;}.home-text p{font-size:14px;}}
-
+    .home{display:flex;align-items:center;padding:140px;padding-bottom:100px;background-color:#fdbd58;}.home-text{flex:1;padding:20px;}.home-text h1{font-size:42px;font-weight:100;margin:0;color: #fff;}.home-text p{font-size:16px;margin:10px 0;color: #f3f2f2;}.home-image{max-width:50%;padding:20px;}.home-image img{max-width:80%;border-radius:10px;}.home-image{position:relative;overflow:hidden;}@media (max-width:768px){.home{padding:150px 0;padding-bottom:200px;}.home-text h1{font-size:36px;}.home-text p{font-size:14px;}}
+    /* github Style */
+    .github-judul h1 { font-size: 25px; font-family: "Plus Jakarta Sans", sans-serif; font-weight: 300; padding: 120px; padding-top: 100px; padding-bottom: 30px; position: relative; } .github-container { justify-content: center; align-items: center; max-width: 70%; margin: 0 auto; margin-bottom: 30px; padding: 1px; padding-left: 50px; background-color: #fdbd58; border-radius: 10px;  } .github-container p{ color: #fff; font-family: "Plus Jakarta Sans", sans-serif; font-size: 15px; } .github-judul i { color: #fdbd58; font-size: 75px; } @media screen and (max-width: 768px) { .github-judul h1 { font-size: 18px; padding: 5px; } .github-container p { font-size: 15px; padding: 5px; } .github-container { justify-content: center; align-items: center; max-width: 50%; margin: 0 auto; margin-bottom: 20px; padding: 5px; padding-left: 25px; background-color: #fdbd58; border-radius: 5px;  } .github-container { max-width: 100%; } }
+    /* API Style */
+    .api-judul h1 { font-size: 25px; font-family: "Plus Jakarta Sans", sans-serif; font-weight: 300; padding: 120px; padding-top: 100px; padding-bottom: 30px; position: relative; } .api-container { justify-content: center; align-items: center; max-width: 70%; margin: 0 auto; margin-bottom: 100px; padding: 1px; padding-left: 50px; padding-right: 50px; padding-bottom: 50px; background-color: #fdbd58; border-radius: 10px;  } .api-container p{ color: #fff; font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; } .api-judul i { color: #fdbd58; font-size: 75px; } @media screen and (max-width: 768px) { .api-judul h1 { font-size: 18px; padding: 5px; } .api-container p { font-size: 15px; padding: 5px; } .api-container { justify-content: center; align-items: center; max-width: 50%; margin: 0 auto; margin-bottom: 20px; padding: 5px; padding-left: 25px; background-color: #fdbd58; border-radius: 5px;  } .api-container { max-width: 100%; } }
+    /* wiki Style */
+    .wiki{display:flex;align-items:center;padding:140px;padding-bottom:100px;background-color:#fdbd58; width: auto; height: 600px;}.wiki-text{flex:1;padding:20px;}.wiki-text h1{font-size:42px;font-weight:100;margin:0;color: #fff;}.wiki-text p{font-size:16px;margin:10px 0;color: #f3f2f2;}.wiki-image{max-width:50%;padding:20px;}.wiki-image img{max-width:80%;border-radius:10px;}.wiki-image{position:relative;overflow:hidden;}@media (max-width:768px){.wiki{padding:150px 0;padding-bottom:200px;}.wiki-text h1{font-size:36px;}.wiki-text p{font-size:14px;}}
     </style>
   </head>
 
@@ -32,7 +36,7 @@
             <li class="nav-item"><a href="#rumah" class="nav-link">Rumah</a></li>
             <li class="nav-item"><a href="#github" class="nav-link">Github</a></li>
             <li class="nav-item"><a href="#api" class="nav-link">API</a></li>
-            <li class="nav-item"><a href="#instal" class="nav-link">WikiXgrow</a></li>
+            <li class="nav-item"><a href="#wiki" class="nav-link">WikiXgrow</a></li>
         </ul>
       </div>
     </nav>
@@ -44,6 +48,7 @@
         <div class="home-text">
           <h1>XGrow Developer Dokumentasi</h1>
           <p>XGrow Developer adalah halaman panduan komprehensif yang memandu setiap kebutuhan pengembangan dalam melihat dokumentasi XGrow</p>
+          <p>Diperbarui Tanggal : 29 September 2023</p>
         </div>
         <div class="home-image">
           <img src="https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-10/assets/img/img1.jpg" alt="home-Image" id="imgHomeUbah"/>
@@ -52,6 +57,321 @@
     </section>
     <!-- Home (Akhir) -->
 
+    <!-- Github (Awal) -->
+    <section id="github">
+      <div class="github-judul">
+        <h1><i class="fab fa-github"></i>&nbsp; Github </h1>
+      </div>
+      <div class="github-container">
+        <p>Frontend Repository : https://github.com/Kampus-Merdeka-Software-Engineering/front-end-capstone-project-section-semarang-group-10</p>
+      </div>
+      <div class="github-container">
+        <p>Backend Repository : https://github.com/Kampus-Merdeka-Software-Engineering/back-end-capstone-project-section-semarang-group-10</p>
+      </div>
+    </section>
+    <!-- Github (Akhir) -->
+
+    <!-- API (Awal) -->
+      <section id="api">
+        <div class="api-judul">
+          <h1><i class="fa-solid fa-cloud"></i>&nbsp; API Dokumentasi </h1>
+        </div>
+        <div class="api-container">
+          <p>Program Unggulan</p>
+          <table>
+            <tr>
+                <th>API</th>
+                <th>HTTP Method</th>
+                <th>Endpoint URL</th>
+                <th>Deskripsi</th>
+                <th>Kunci</th>
+            </tr>
+            <tr>
+                <td>Program Unggulan API</td>
+                <td>GET</td>
+                <td>/api/unggulan</td>
+                <td>API untuk melihat data secara keseluruhan</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+                <td>Program Unggulan API</td>
+                <td>GET</td>
+                <td>api/unggulan/:id</td>
+                <td>Melihat data program unggulan XGrow berdasar ID</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+                <td>Program Unggulan API</td>
+                <td>POST</td>
+                <td>/unggulan</td>
+                <td>Menambahakan data program unggulan XGrow</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+              <td>Program Unggulan API</td>
+              <td>PUT</td>
+              <td>/unggulan/:id</td>
+              <td>Meubah data program unggulan XGrow berdasar ID Program unggulan terpanggil</td>
+              <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+              <td>Program Unggulan API</td>
+              <td>DELETE</td>
+              <td>/unggulan/:id</td>
+              <td>Mehapus data program unggulan XGrow berdasar ID Program unggulan terpanggil</td>
+              <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+        </table>
+        </div>
+        <div class="api-container">
+          <p>Program Baru API</p>
+          <table>
+            <tr>
+                <th>API</th>
+                <th>HTTP Method</th>
+                <th>Endpoint URL</th>
+                <th>Deskripsi</th>
+                <th>Kunci</th>
+            </tr>
+            <tr>
+                <td>Program baru API</td>
+                <td>GET</td>
+                <td>/api/baru</td>
+                <td>API untuk melihat data secara keseluruhan</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+                <td>Program baru API</td>
+                <td>GET</td>
+                <td>api/baru/:id</td>
+                <td>Melihat data program baru XGrow berdasar ID</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+                <td>Program baru API</td>
+                <td>POST</td>
+                <td>/baru</td>
+                <td>Menambahakan data program baru XGrow</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+              <td>Program baru API</td>
+              <td>PUT</td>
+              <td>/baru/:id</td>
+              <td>Meubah data program baru XGrow berdasar ID Program baru terpanggil</td>
+              <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+              <td>Program baru API</td>
+              <td>DELETE</td>
+              <td>/baru/:id</td>
+              <td>Mehapus data program baru XGrow berdasar ID Program baru terpanggil</td>
+              <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+          </table>
+        </div>
+        <div class="api-container">
+          <p>Berlangganan API</p>
+          <table>
+            <tr>
+                <th>API</th>
+                <th>HTTP Method</th>
+                <th>Endpoint URL</th>
+                <th>Deskripsi</th>
+                <th>Security</th>
+            </tr>
+            <tr>
+                <td>Program berlangganan API</td>
+                <td>GET</td>
+                <td>/api/berlangganan</td>
+                <td>API untuk melihat data secara keseluruhan</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+                <td>Program berlangganan API</td>
+                <td>GET</td>
+                <td>api/berlangganan/:id</td>
+                <td>Melihat data program berlangganan XGrow berdasar ID</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+                <td>Program berlangganan API</td>
+                <td>POST</td>
+                <td>/berlangganan</td>
+                <td>Menambahakan data program berlangganan XGrow</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+              <td>Program berlangganan API</td>
+              <td>PUT</td>
+              <td>/berlangganan/:id</td>
+              <td>Meubah data program berlangganan XGrow berdasar ID Program berlangganan terpanggil</td>
+              <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+              <td>Program berlangganan API</td>
+              <td>DELETE</td>
+              <td>/berlangganan/:id</td>
+              <td>Mehapus data program berlangganan XGrow berdasar ID Program berlangganan terpanggil</td>
+              <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+          </table>
+        </div>
+        <div class="api-container">
+          <p>Info Berita API</p>
+          <table>
+            <tr>
+                <th>API</th>
+                <th>HTTP Method</th>
+                <th>Endpoint URL</th>
+                <th>Deskripsi</th>
+                <th>Security</th>
+            </tr>
+            <tr>
+                <td>Program infoberita API</td>
+                <td>GET</td>
+                <td>/api/infoberita</td>
+                <td>API untuk melihat data secara keseluruhan</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+                <td>Program infoberita API</td>
+                <td>GET</td>
+                <td>api/infoberita/:id</td>
+                <td>Melihat data program infoberita XGrow berdasar ID</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+                <td>Program infoberita API</td>
+                <td>POST</td>
+                <td>/infoberita</td>
+                <td>Menambahakan data program infoberita XGrow</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+              <td>Program infoberita API</td>
+              <td>PUT</td>
+              <td>/infoberita/:id</td>
+              <td>Meubah data program infoberita XGrow berdasar ID Program infoberita terpanggil</td>
+              <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+              <td>Program infoberita API</td>
+              <td>DELETE</td>
+              <td>/infoberita/:id</td>
+              <td>Mehapus data program infoberita XGrow berdasar ID Program infoberita terpanggil</td>
+              <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+          </table>
+        </div>
+        <div class="api-container">
+          <p>Data Home API</p>
+          <table>
+            <tr>
+                <th>API</th>
+                <th>HTTP Method</th>
+                <th>Endpoint URL</th>
+                <th>Deskripsi</th>
+                <th>Security</th>
+            </tr>
+            <tr>
+                <td>Program datahome API</td>
+                <td>GET</td>
+                <td>/api/datahome</td>
+                <td>API untuk melihat data secara keseluruhan</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+                <td>Program datahome API</td>
+                <td>GET</td>
+                <td>api/datahome/:id</td>
+                <td>Melihat data program datahome XGrow berdasar ID</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+                <td>Program datahome API</td>
+                <td>POST</td>
+                <td>/datahome</td>
+                <td>Menambahakan data program datahome XGrow</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+              <td>Program datahome API</td>
+              <td>PUT</td>
+              <td>/datahome/:id</td>
+              <td>Meubah data program datahome XGrow berdasar ID Program datahome terpanggil</td>
+              <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+              <td>Program datahome API</td>
+              <td>DELETE</td>
+              <td>/datahome/:id</td>
+              <td>Mehapus data program datahome XGrow berdasar ID Program datahome terpanggil</td>
+              <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+          </table>
+        </div>
+        <div class="api-container">
+          <p>Kontak API</p>
+          <table>
+            <tr>
+                <th>API</th>
+                <th>HTTP Method</th>
+                <th>Endpoint URL</th>
+                <th>Deskripsi</th>
+                <th>Security</th>
+            </tr>
+            <tr>
+                <td>Program kontak API</td>
+                <td>GET</td>
+                <td>/api/kontak</td>
+                <td>API untuk melihat data secara keseluruhan</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+                <td>Program kontak API</td>
+                <td>GET</td>
+                <td>api/kontak/:id</td>
+                <td>Melihat data program kontak XGrow berdasar ID</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+                <td>Program kontak API</td>
+                <td>POST</td>
+                <td>/kontak</td>
+                <td>Menambahakan data program kontak XGrow</td>
+                <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+              <td>Program kontak API</td>
+              <td>PUT</td>
+              <td>/kontak/:id</td>
+              <td>Meubah data program kontak XGrow berdasar ID Program kontak terpanggil</td>
+              <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+            <tr>
+              <td>Program kontak API</td>
+              <td>DELETE</td>
+              <td>/kontak/:id</td>
+              <td>Mehapus data program kontak XGrow berdasar ID Program kontak terpanggil</td>
+              <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <!-- API (Akhir) -->
+
+      <!-- Home (Awal) -->
+        <section class="sectionp" id="wiki">
+          <div class="wiki">
+            <div class="wiki-text">
+              <h1>404 - Wiki XGrow Developer</h1>
+              <p>Saat Ini Wiki Belum Tersedia (Dalam Pengembangan)</p>
+            </div>
+          </div>
+        </section>
+      <!-- Home (Akhir) -->
+    
     <!-- JS Style -->
     <script>
       // Function Navigasi Bar Smooth (Navbar) (Awal)
