@@ -1,13 +1,13 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'src', 'views'));
+app.use(cors());
+
+app.use(express.static(path.join(__dirname, 'src', 'views')));
 
 const kursusRoutes = require('./src/routes/kursusRoutes');
 const kontakRoutes = require('./src/routes/kontakRoutes');
@@ -17,11 +17,8 @@ const datahomeRoutes = require('./src/routes/datahomeRoutes');
 const unggulanRoutes = require('./src/routes/unggulanRoutes');
 const pbaruRoutes = require('./src/routes/pbaruRoutes');
 
-app.use(bodyParser.json());
-app.use(cors());
-
 app.get('/dokumentasi', (req, res) => {
-  res.render('index', { title: 'Halaman Dokumentasi XGROW DEVELOPER' });
+  res.sendFile(path.join(__dirname, 'src', 'views', 'index.html'));
 });
 
 app.use('/api', kursusRoutes);

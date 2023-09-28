@@ -14,6 +14,9 @@
     html, body { font-family: "Plus Jakarta Sans", sans-serif; background-image: none; margin: 0; padding: 0; text-decoration: none; font-family: Arial, sans-serif; list-style: none; box-sizing: border-box; outline: none; overflow-x: hidden; } h1, h2, h3, h4, h5, h6 { margin-top: 0px; margin-bottom: 0px; } p { font-size: 15px; line-height: 30px; font-weight: 300; color: #afafaf; } ::-webkit-scrollbar { width: 7px; height: auto; } ::-webkit-scrollbar-thumb { background-color: #fdbd58; border-radius: 10px; } ::-webkit-scrollbar-track { background-color: transparent; }
     /* Navbar Style */
     .navbar{position:fixed;top:0;left:0;z-index:1000;width:100%;height:80px;background-color:#fff;box-shadow:0px 2px 5px rgba(0,0,0,0.1)}.navbar-container{display:flex;justify-content:space-between;align-items:center;height:100%;padding:0 20px;margin:0 auto;max-width:1200px}.navbar-logo{width:200px;height:auto}.navbar-nav{list-style:none;display:flex;margin:0;padding:0}.nav-item{margin-right:5px;padding:10px 10px}.nav-link{text-decoration:none;color:#333;transition:color 0.5s}.nav-link:hover{color:#fdbd58}nav a{color:#333;text-decoration:none}nav a.aktif{color:#fdbd58}.checkbtn{font-size:30px;color:black;float:right;line-height:80px;margin-right:40px;cursor:pointer;display:none}#check{display:none}@media (max-width:768px){.navbar-logo{margin-bottom:20px}.navbar-nav{position:fixed;width:100%;height:100vh;background:#fff;top:80px;left:-120%;text-align:center;transition:all 0.5s;display:block;list-style-type:disc}.nav-item{display:block;margin:20px 0;line-height:30px}.nav-link{padding:0;margin:0;font-size:20px;color:#333}.checkbtn{display:block}nav a.aktif{background:none;color:#fdbd58}#check:checked~ul{left:0}}
+    
+    /* home Style */
+    .home{display:flex;align-items:center;padding:150px;background-color:#ffffff;}.home-text{flex:1;padding:20px;}.home-text h1{font-size:42px;font-weight:100;margin:0;}.home-text p{font-size:16px;margin:10px 0;}.home-image{max-width:50%;padding:20px;}.home-image img{max-width:80%;border-radius:10px;}.home-image{position:relative;overflow:hidden;}@media (max-width:768px){.home{padding:150px 0;padding-bottom:200px;}.home-text h1{font-size:36px;}.home-text p{font-size:14px;}}
 
     </style>
   </head>
@@ -26,13 +29,28 @@
         <input type="checkbox" id="check" />
         <label for="check" class="checkbtn"> <i class="fas fa-bars"></i></label>
         <ul class="navbar-nav">
-            <li class="nav-item"><a href="#home" class="nav-link">Rumah</a></li>
+            <li class="nav-item"><a href="#rumah" class="nav-link">Rumah</a></li>
+            <li class="nav-item"><a href="#github" class="nav-link">Github</a></li>
             <li class="nav-item"><a href="#api" class="nav-link">API</a></li>
             <li class="nav-item"><a href="#instal" class="nav-link">WikiXgrow</a></li>
         </ul>
       </div>
     </nav>
     <!-- Navigasi Bar (Akhir)-->
+
+    <!-- Home (Awal) -->
+    <section class="sectionp" id="rumah">
+      <div class="home">
+        <div class="home-text">
+          <h1>XGrow Developer Dokumentasi</h1>
+          <p>XGrow Developer adalah halaman panduan komprehensif yang memandu setiap kebutuhan pengembangan dalam melihat dokumentasi XGrow</p>
+        </div>
+        <div class="home-image">
+          <img src="https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-10/assets/img/img1.jpg" alt="home-Image" id="imgHomeUbah"/>
+        </div>
+      </div>
+    </section>
+    <!-- Home (Akhir) -->
 
     <!-- JS Style -->
     <script>
