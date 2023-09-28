@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device=width,initial-scale=1.0" />
+
+    <link rel="icon" href="https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-10/assets/img/logo-icon.png" type="image/png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title>XGROW.DEV</title>
+
+    <style>
+    /* Global Style */
+    html, body { font-family: "Plus Jakarta Sans", sans-serif; background-image: none; margin: 0; padding: 0; text-decoration: none; font-family: Arial, sans-serif; list-style: none; box-sizing: border-box; outline: none; overflow-x: hidden; } h1, h2, h3, h4, h5, h6 { margin-top: 0px; margin-bottom: 0px; } p { font-size: 15px; line-height: 30px; font-weight: 300; color: #afafaf; } ::-webkit-scrollbar { width: 7px; height: auto; } ::-webkit-scrollbar-thumb { background-color: #fdbd58; border-radius: 10px; } ::-webkit-scrollbar-track { background-color: transparent; }
+    /* Navbar Style */
+    .navbar{position:fixed;top:0;left:0;z-index:1000;width:100%;height:80px;background-color:#fff;box-shadow:0px 2px 5px rgba(0,0,0,0.1)}.navbar-container{display:flex;justify-content:space-between;align-items:center;height:100%;padding:0 20px;margin:0 auto;max-width:1200px}.navbar-logo{width:200px;height:auto}.navbar-nav{list-style:none;display:flex;margin:0;padding:0}.nav-item{margin-right:5px;padding:10px 10px}.nav-link{text-decoration:none;color:#333;transition:color 0.5s}.nav-link:hover{color:#fdbd58}nav a{color:#333;text-decoration:none}nav a.aktif{color:#fdbd58}.checkbtn{font-size:30px;color:black;float:right;line-height:80px;margin-right:40px;cursor:pointer;display:none}#check{display:none}@media (max-width:768px){.navbar-logo{margin-bottom:20px}.navbar-nav{position:fixed;width:100%;height:100vh;background:#fff;top:80px;left:-120%;text-align:center;transition:all 0.5s;display:block;list-style-type:disc}.nav-item{display:block;margin:20px 0;line-height:30px}.nav-link{padding:0;margin:0;font-size:20px;color:#333}.checkbtn{display:block}nav a.aktif{background:none;color:#fdbd58}#check:checked~ul{left:0}}
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigasi Bar (Awal)-->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html"><img src="https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-10/assets/img/logodev-backend.gif" alt="Image" class="navbar-logo"/></a>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn"> <i class="fas fa-bars"></i></label>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#home" class="nav-link">Rumah</a></li>
+            <li class="nav-item"><a href="#api" class="nav-link">API</a></li>
+            <li class="nav-item"><a href="#instal" class="nav-link">WikiXgrow</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navigasi Bar (Akhir)-->
+
+    <!-- JS Style -->
+    <script>
+      // Function Navigasi Bar Smooth (Navbar) (Awal)
+      document.querySelectorAll("nav a").forEach((tautan) => {
+        tautan.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href.startsWith("#")) {
+            e.preventDefault();
+            const idTujuan = href.substring(1);
+            const tujuan = document.getElementById(idTujuan);
+
+            if (tujuan) {
+              tujuan.scrollIntoView({
+                behavior: "smooth",
+              });
+            }
+          }
+        });
+      });
+      // Function Navigasi Bar Smooth (Navbar) (Akhir)
+
+      // Href aktif di A (Navbar) (Awal)
+      document.addEventListener("DOMContentLoaded", function () {
+        const bagian = document.querySelectorAll("section");
+        const tautanNavigasi = document.querySelectorAll("nav a");
+        tautanNavigasi[0].classList.add("aktif");
+
+        document.addEventListener("scroll", function () {
+          bagian.forEach((bagian) => {
+            const rect = bagian.getBoundingClientRect();
+            if (rect.top <= 50 && rect.bottom >= 50) {
+              const idBagian = bagian.getAttribute("id");
+              const tautanAktif = document.querySelector(
+                `nav a[href="#${idBagian}"]`
+              );
+              tautanNavigasi.forEach((tautan) => {
+                tautan.classList.remove("aktif");
+              });
+              tautanAktif.classList.add("aktif");
+            }
+          });
+        });
+      });
+      // Href aktif di A (Navbar) (Akhir)
+    </script>
+
+  </body>
+</html>
