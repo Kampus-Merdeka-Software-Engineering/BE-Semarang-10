@@ -14,14 +14,14 @@ const PbaruController = {
   },
 
   buatPbaru: (req, res) => {
-    const { judul, keterangan } = req.body;
+    const { judul, keterangan, gambar } = req.body;
 
-    if (!judul || !keterangan) {
+    if (!judul || !keterangan || !gambar) {
       res.status(400).json({ error: 'Form isi diperlukan' });
       return;
     }
 
-    const PbaruBaru = { judul, keterangan };
+    const PbaruBaru = { judul, keterangan, gambar };
 
     Pbaru.buat(PbaruBaru, (err, hasil) => {
       if (err) {
@@ -35,14 +35,14 @@ const PbaruController = {
 
   editPbaru: (req, res) => {
     const idPbaru = req.params.id;
-    const { judul, keterangan } = req.body;
+    const { judul, keterangan, gambar } = req.body;
 
-    if (!judul || !keterangan) {
+    if (!judul || !keterangan || !gambar) {
       res.status(400).json({ error: 'Form isi diperlukan' });
       return;
     }
 
-    const pbaruDiedit = { judul, keterangan, status: 'Terkirim dan Teredit' };
+    const pbaruDiedit = { judul, keterangan, gambar, status: 'Terkirim dan Teredit' };
 
     Pbaru.edit(idPbaru, pbaruDiedit, (err, hasil) => {
       if (err) {

@@ -13,12 +13,12 @@ const Pbaru = {
   },
 
   buat: (data, callback) => {
-    if (!data || !data.judul || !data.keterangan) {
+    if (!data || !data.judul || !data.keterangan || !data.gambar) {
       const error = new Error('Data isi diperlukan. Mohon periksa kembali');
       console.error('Error saat membuat program baru:', error);
       callback(error, null);
     } else {
-      db.query('INSERT INTO xgrowpbaru (judul, keterangan) VALUES (?, ?)', [data.judul, data.keterangan], (err, result) => {
+      db.query('INSERT INTO xgrowpbaru (judul, keterangan, gambar) VALUES (?, ?, ?)', [data.judul, data.keterangan, data.gambar], (err, result) => {
         if (err) {
           console.error('Error saat membuat program baru:', err);
           callback(err, null);
@@ -47,12 +47,12 @@ const Pbaru = {
   },
 
   edit: (id, data, callback) => {
-    if (!id || !data || (!data.judul && !data.keterangan)) {
+    if (!id || !data || (!data.judul && !data.keterangan && !data.gambar)) {
       const error = new Error('ID program baru dan data diperlukan.');
       console.error('Error saat mengedit program baru:', error);
       callback(error, null);
     } else {
-      db.query('UPDATE xgrowpbaru SET judul = ?, keterangan = ? WHERE id = ?', [data.judul, data.keterangan, id], (err, result) => {
+      db.query('UPDATE xgrowpbaru SET judul = ?, keterangan = ?, gambar = ?, WHERE id = ?', [data.judul, data.keterangan, data.gambar, id], (err, result) => {
         if (err) {
           console.error('Error saat mengedit program baru:', err);
           callback(err, null);
