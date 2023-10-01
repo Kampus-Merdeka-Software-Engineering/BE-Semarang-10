@@ -32,7 +32,7 @@ const InfoberitaController = {
       res.status(201).json({ pesan: 'Info berita berhasil dibuat', infoberita: hasil });
     });
   },
-  
+
   editInfoberita: (req, res) => {
     const idInfoberita = req.params.id;
     const { berita, tanggal } = req.body;
@@ -86,6 +86,5 @@ const InfoberitaController = {
   },
 
 };
-
 
 module.exports = InfoberitaController;
