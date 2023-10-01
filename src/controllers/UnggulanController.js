@@ -14,14 +14,14 @@ const UnggulanController = {
   },
   
   buatUnggulan: (req, res) => {
-    const { judul, keterangan } = req.body;
+    const { judul, keterangan, gambar } = req.body;
   
-    if (!judul || !keterangan) {
+    if (!judul || !keterangan || !gambar) {
       res.status(400).json({ error: 'Form isi diperlukan' });
       return;
     }
   
-    const unggulanBaru = { judul, keterangan };
+    const unggulanBaru = { judul, keterangan, gambar };
   
     Unggulan.buat(unggulanBaru, (err, hasil) => {
       if (err) {
@@ -35,14 +35,14 @@ const UnggulanController = {
   
   editUnggulan: (req, res) => {
     const idUnggulan = req.params.id;
-    const { judul, keterangan } = req.body;
+    const { judul, keterangan, gambar } = req.body;
 
-    if (!judul || !keterangan) {
+    if (!judul || !keterangan || !gambar) {
       res.status(400).json({ error: 'Form isi diperlukan' });
       return;
     }
 
-    const unggulanDiedit = { judul, keterangan };
+    const unggulanDiedit = { judul, keterangan, gambar };
 
     Unggulan.edit(idUnggulan, unggulanDiedit, (err, hasil) => {
       if (err) {
