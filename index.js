@@ -1,11 +1,10 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3000;
-
-app.use(cors());
 
 app.use(express.static(path.join(__dirname, 'src', 'views')));
 
@@ -16,6 +15,9 @@ const infoberitaRoutes = require('./src/routes/infoberitaRoutes');
 const datahomeRoutes = require('./src/routes/datahomeRoutes');
 const unggulanRoutes = require('./src/routes/unggulanRoutes');
 const pbaruRoutes = require('./src/routes/pbaruRoutes');
+
+app.use(bodyParser.json());
+app.use(cors());
 
 app.get('/dokumentasi', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'views', 'index.html'));
