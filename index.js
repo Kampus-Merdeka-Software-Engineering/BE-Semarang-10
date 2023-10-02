@@ -15,6 +15,7 @@ const infoberitaRoutes = require('./src/routes/infoberitaRoutes');
 const datahomeRoutes = require('./src/routes/datahomeRoutes');
 const unggulanRoutes = require('./src/routes/unggulanRoutes');
 const pbaruRoutes = require('./src/routes/pbaruRoutes');
+const pendataanRoutes = require('./src/routes/pendataanRoutes');
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -30,6 +31,7 @@ app.use('/api', infoberitaRoutes);
 app.use('/api', datahomeRoutes);
 app.use('/api', unggulanRoutes);
 app.use('/api', pbaruRoutes);
+app.use('/api', pendataanRoutes);
 
 app.listen(port, () => {
   console.log(`Server berjalan di port ${port}`);
