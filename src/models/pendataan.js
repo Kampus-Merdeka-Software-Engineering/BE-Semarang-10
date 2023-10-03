@@ -78,6 +78,23 @@ const Pendataan = {
       });
     }
   },
+
+  tampilkanPendataanByKode: (kodependataan, callback) => {
+    if (!kodependataan) {
+      const error = new Error('Kode pendataan diperlukan.');
+      console.error('Error saat menampilkan pendataan berdasarkan kodependataan:', error);
+      callback(error, null);
+    } else {
+      db.query('SELECT * FROM xgrowpendataan WHERE kodependataan = ?', [kodependataan], (err, result) => {
+        if (err) {
+          console.error('Error saat menampilkan pendataan berdasarkan kodependataan:', err);
+          callback(err, null);
+        } else {
+          callback(null, result);
+        }
+      });
+    }
+  },
 };
 
 module.exports = Pendataan;

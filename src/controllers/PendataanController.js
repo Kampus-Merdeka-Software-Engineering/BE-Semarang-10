@@ -79,6 +79,22 @@ const PendataanController = {
     });
   },
 
+  tampilkanPendataanByKode: (req, res) => {
+    const kodependataan = req.params.id;
+    Pendataan.tampilkanPendataanByKode(kodependataan, (err, hasil) => {
+      if (err) {
+        console.error('Error saat mengambil data pendataan berdasarkan kodependataan:', err);
+        res.status(500).json({ error: 'Kesalahan Internal Server' });
+        return;
+      }
+      if (hasil.length > 0) {
+        res.status(200).json(hasil[0]);
+      } else {
+        res.status(404).json({ error: 'Pendataan tidak ditemukan' });
+      }
+    });
+  },
+
 };
 
 module.exports = PendataanController;
