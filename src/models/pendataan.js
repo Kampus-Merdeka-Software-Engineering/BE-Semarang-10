@@ -13,12 +13,12 @@ const Pendataan = {
   },
   
   buat: (data, callback) => {
-    if (!data || !data.judul || !data.keterangan || !data.nama || !data.email || !data.pesan || !data.status || !data.tanggalpendataan) {
+    if (!data ||  !data.kodependataan || !data.judul || !data.keterangan || !data.nama || !data.email || !data.pesan || !data.status || !data.tanggalpendataan) {
       const error = new Error('Data isi diperlukan. Mohon periksa kembali');
       console.error('Error saat membuat pendataan:', error);
       callback(error, null);
     } else {        
-      db.query('INSERT INTO xgrowpendataan (judul, keterangan, nama, email, pesan, status, tanggalpendataan ) VALUES (?, ?, ?, ?, ?, ?, ?)', [data.judul, data.keterangan, data.nama, data.email, data.pesan, data.status, data.tanggalpendataan], (err, result) => {
+      db.query('INSERT INTO xgrowpendataan (kodependataan, judul, keterangan, nama, email, pesan, status, tanggalpendataan ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', [data.kodependataan, data.judul, data.keterangan, data.nama, data.email, data.pesan, data.status, data.tanggalpendataan], (err, result) => {
         if (err) {
           console.error('Error saat membuat pendataan:', err);
           callback(err, null);
@@ -46,12 +46,12 @@ const Pendataan = {
     }
   },
   edit: (id, data, callback) => {
-    if (!id || !data || (!data.judul && !data.keterangan && !data.nama && !data.email  && !data.pesan  && !data.status  && !data.tanggalpendataan )) {
+    if (!id || !data || (!data.kodependataan && !data.judul && !data.keterangan && !data.nama && !data.email  && !data.pesan  && !data.status  && !data.tanggalpendataan )) {
       const error = new Error('ID pendataan dan data diperlukan.');
       console.error('Error saat mengedit pendataan:', error);
       callback(error, null);
     } else {
-      db.query('UPDATE xgrowpendataan SET judul = ?, keterangan = ?, nama = ?, email = ?, pesan = ?, status = ?, tanggalpendataan = ? WHERE id = ?', [data.judul, data.keterangan, data.nama, data.email, data.pesan, data.status, data.tanggalpendataan, id], (err, result) => {
+      db.query('UPDATE xgrowpendataan SET kodependataan = ?, judul = ?, keterangan = ?, nama = ?, email = ?, pesan = ?, status = ?, tanggalpendataan = ? WHERE id = ?', [data.kodependataan, data.judul, data.keterangan, data.nama, data.email, data.pesan, data.status, data.tanggalpendataan, id], (err, result) => {
         if (err) {
           console.error('Error saat mengedit pendataan:', err);
           callback(err, null);

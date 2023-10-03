@@ -14,12 +14,12 @@ const PendataanController = {
   },
   
   buatPendataan: (req, res) => {
-    const { judul, keterangan, nama, email, pesan, status, tanggalpendataan } = req.body;
-    if (!judul || !keterangan || !nama || !email || !pesan || !status || !tanggalpendataan) {
+    const { kodependataan, judul, keterangan, nama, email, pesan, status, tanggalpendataan } = req.body;
+    if (!kodependataan || !judul || !keterangan || !nama || !email || !pesan || !status || !tanggalpendataan) {
       res.status(400).json({ error: 'Form isi diperlukan' });
       return;
     }
-    const pendataanBaru = { judul, keterangan, nama, email, pesan, status, tanggalpendataan  };
+    const pendataanBaru = { kodependataan, judul, keterangan, nama, email, pesan, status, tanggalpendataan  };
     Pendataan.buat(pendataanBaru, (err, hasil) => {
       if (err) {
         console.error('Error saat membuat pendataan:', err);
@@ -32,13 +32,13 @@ const PendataanController = {
   
   editPendataan: (req, res) => {
     const idPendataan = req.params.id;
-    const { judul, keterangan, nama, email, pesan, status, tanggalpendataan } = req.body;
+    const { kodependataan, judul, keterangan, nama, email, pesan, status, tanggalpendataan } = req.body;
 
-    if (!judul || !keterangan || !nama || !email || !pesan || !status || !tanggalpendataan) {
+    if (!kodependataan || !judul || !keterangan || !nama || !email || !pesan || !status || !tanggalpendataan) {
       res.status(400).json({ error: 'Form isi diperlukan' });
       return;
     }
-    const pendataanDiedit = { judul, keterangan, nama, email, pesan, status, tanggalpendataan };
+    const pendataanDiedit = { kodependataan, judul, keterangan, nama, email, pesan, status, tanggalpendataan };
     Pendataan.edit(idPendataan, pendataanDiedit, (err, hasil) => {
       if (err) {
         console.error('Error saat mengedit pendataan:', err);
