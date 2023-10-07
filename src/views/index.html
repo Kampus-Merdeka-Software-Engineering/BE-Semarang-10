@@ -22,6 +22,11 @@
     .api-judul h1 { font-size: 25px; font-family: "Plus Jakarta Sans", sans-serif; font-weight: 300; padding: 120px; padding-top: 100px; padding-bottom: 30px; position: relative; } .api-container { justify-content: center; align-items: center; max-width: 70%; margin: 0 auto; margin-bottom: 100px; padding: 1px; padding-left: 50px; padding-right: 50px; padding-bottom: 50px; background-color: #fdbd58; border-radius: 10px;  } .api-container p{ color: #fff; font-family: "Plus Jakarta Sans", sans-serif; font-size: 18px; } .api-judul i { color: #fdbd58; font-size: 75px; } @media screen and (max-width: 768px) { .api-judul h1 { font-size: 18px; padding: 5px; } .api-container p { font-size: 15px; padding: 5px; } .api-container { justify-content: center; align-items: center; max-width: 50%; margin: 0 auto; margin-bottom: 20px; padding: 5px; padding-left: 25px; background-color: #fdbd58; border-radius: 5px;  } .api-container { max-width: 100%; } }
     /* wiki Style */
     .wiki{display:flex;align-items:center;padding:140px;padding-bottom:100px;background-color:#fdbd58; width: auto; height: 600px;}.wiki-text{flex:1;padding:20px;}.wiki-text h1{font-size:42px;font-weight:100;margin:0;color: #fff;}.wiki-text p{font-size:16px;margin:10px 0;color: #f3f2f2;}.wiki-image{max-width:50%;padding:20px;}.wiki-image img{max-width:80%;border-radius:10px;}.wiki-image{position:relative;overflow:hidden;}@media (max-width:768px){.wiki{padding:150px 0;padding-bottom:200px;}.wiki-text h1{font-size:36px;}.wiki-text p{font-size:14px;}}
+    /* wiki list Style */
+    .sectionp{display:flex;align-items:flex-start;justify-content:space-between;}.wiki{flex:1;background-color:#fdbd58;padding:20px;margin-right:50px;margin-left:20px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1);}.wiki-text{text-align:center;}.sub-pembahasan{flex:0.2;background-color:#fdbd58;color:#fff;padding:20px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.1);margin-left:50px;}.sub-pembahasan h2{font-size:18px;margin-bottom:10px;}.sub-pembahasan ul{list-style-type:none;padding:0;}.sub-pembahasan li{margin-bottom:10px;}.sub-pembahasan a{color:#fff;text-decoration:none;display:block;padding:5px;border-radius:5px;}.sub-pembahasan a:hover{background-color:#fda20f;}
+    /* footer Style */
+    .footer-container{display:flex;justify-content:center;align-items:center;background-color:#fdbd58;border-top-right-radius:50px;border-top-left-radius:50px;height:100px;margin-top:30px;}.socialicons a{font-size:inherit;color:#fdbd58;text-decoration:none;padding:10px;border-radius:100px;background-color:#fff;}.socialicons a:hover{background-color:#e7e7e7;transition:0.5s;}.socialicons a:hover{color:#fdbd58;transition:0.5s;}.footerBottom{background-color:#fdbd58;padding:0;text-align:center;border-top:2px solid #fff;}.copyright{margin:0;text-decoration:none;color:#fff;padding-top:10px;padding-bottom:10px;font-family:"Plus Jakarta Sans",sans-serif;font-size:12px;}@media screen and (max-width:768px){.footer-container{flex-direction:row;flex-wrap:wrap;justify-content:center;}.copyright{padding-bottom:10px;}}
+
     </style>
   </head>
 
@@ -136,35 +141,35 @@
             <tr>
                 <td>Program baru API</td>
                 <td>GET</td>
-                <td>/api/baru</td>
+                <td>/api/pbaru</td>
                 <td>API untuk melihat data secara keseluruhan</td>
                 <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
             </tr>
             <tr>
                 <td>Program baru API</td>
                 <td>GET</td>
-                <td>api/baru/:id</td>
+                <td>api/pbaru/:id</td>
                 <td>Melihat data program baru XGrow berdasar ID</td>
                 <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
             </tr>
             <tr>
                 <td>Program baru API</td>
                 <td>POST</td>
-                <td>/baru</td>
+                <td>/pbaru</td>
                 <td>Menambahakan data program baru XGrow</td>
                 <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
             </tr>
             <tr>
               <td>Program baru API</td>
               <td>PUT</td>
-              <td>/baru/:id</td>
+              <td>/pbaru/:id</td>
               <td>Meubah data program baru XGrow berdasar ID Program baru terpanggil</td>
               <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
             </tr>
             <tr>
               <td>Program baru API</td>
               <td>DELETE</td>
-              <td>/baru/:id</td>
+              <td>/pbaru/:id</td>
               <td>Mehapus data program baru XGrow berdasar ID Program baru terpanggil</td>
               <td style="text-align: center;"><i class="fa-solid fa-lock-open"></i></td>
             </tr>
@@ -359,19 +364,47 @@
           </table>
         </div>
       </section>
-      <!-- API (Akhir) -->
+    <!-- API (Akhir) -->
 
-      <!-- Home (Awal) -->
-        <section class="sectionp" id="wiki">
-          <div class="wiki">
-            <div class="wiki-text">
-              <h1>404 - Wiki XGrow Developer</h1>
-              <p>Saat Ini Wiki Belum Tersedia (Dalam Pengembangan)</p>
+    <!-- Wiki XGrow (Awal) -->
+      <section class="sectionp" id="wiki">
+        <div class="sub-pembahasan">
+            <h2>Wiki XGrow</h2>
+            <ul id="sub-pilihan">
+                <li><a href="#WikiXGrow" onclick="tampilkanHalaman('Wiki XGrow', 'WikiXGrow adalah sumber daya yang berisi informasi, panduan, dan dokumentasi yang berkaitan dengan pengembangan proyek dan topik yang relevan dengan XGrow Media Belajar Online. Wiki ini dapat digunakan oleh pengembang, pengguna, dan pihak-pihak yang tertarik untuk memahami lebih dalam tentang proyek XGrow. serta untuk mengakses informasi teknis, tutorial, dan sumber daya lainnya yang dapat membantu dalam pengembangan perangkat lunak dan teknologi. WikiXGrow ini di buat oleh pengembang XGrow yaitu Grub 10 Section Semaranag, dalam MSIB KM AUG23 RevoU x Kemendikbudristek')">Wiki XGrow</a></li>
+                <li><a href="#2" onclick="tampilkanHalaman('Pengantar XGrow', 'Website XGrow dibangun menggunakan Node.js, Express, dan API. XGrow merupakan website yang dapat menangani permintaan dan respon dari API data. Node.js adalah lingkungan runtime JavaScript yang sangat populer, Express adalah kerangka kerja web untuk Node.js, dan API (Application Programming Interface) adalah cara untuk berinteraksi dengan sumber daya dan layanan melalui permintaan HTTP.')">Pengantar XGrow</a></li>
+                <li><a href="#3" onclick="tampilkanHalaman('XGrow','XGrow adalah media belajar online yang didedikasikan untuk meningkatkan keterampilan dan pengetahuan pengguna dalam berbagai bidang edukasi. Nama XGrow memiliki arti khusus. X menggambarkan angka 10 dalam angka Romawi, karena XGrow dibuat oleh Group 10 Section Semarang dalam Program MSIB KM AUG23 bersama RevoU. Sementara itu, kata Grow mengindikasikan niat dari grup 10 untuk terus berkembang dan memberikan dampak positif pada dunia pendidikan di Indonesia.')">XGrow</a></li>
+                <li><a href="#4" onclick="tampilkanHalaman('NodeJs','Node.js adalah lingkungan runtime JavaScript yang memungkinkan penganannya menjalankan kode JavaScript di sisi server. Hal ini membuatnya ideal untuk membangun aplikasi web yang bersifat real-time dan skalabel. Node.js memiliki pustaka bawaan yang kuat yang memungkinkan Users mengelola operasi masuk/keluar secara efisien dan mengatasi banyak koneksi secara bersamaan.')">NodeJs</a></li>
+                <li><a href="#5" onclick="tampilkanHalaman('Express NodeJs','Express adalah kerangka kerja web yang dibangun di atas Node.js. Ini menyediakan berbagai alat dan fitur untuk membantu pengguna membangun aplikasi web dengan cepat dan mudah. Express memudahkan pembuatan rute (routes), pengelolaan permintaan HTTP, penanganan permintaan berbasis RESTful API, dan banyak lagi.')">Express NodeJs</a></li>
+                <li><a href="#6" onclick="tampilkanHalaman('API','API adalah antarmuka yang digunakan untuk berkomunikasi antara berbagai perangkat lunak atau komponen dalam aplikasi. Dalam konteks website dengan Node.js dan Express, API sering digunakan untuk berkomunikasi dengan database atau layanan eksternal. API memungkinkan aplikasi web untuk mengambil data dari sumber daya eksternal atau mengirim data ke sumber daya eksternal.')">API</a></li>
+            </ul>
+        </div>
+        <div class="wiki">
+            <div class="wiki-text" id="konten-halaman-utama">
+                <h1>Wiki XGrow</h1>
+                <p>WikiXGrow adalah sumber daya yang berisi informasi, panduan, dan dokumentasi yang berkaitan dengan pengembangan proyek dan topik yang relevan dengan XGrow Media Belajar Online. Wiki ini dapat digunakan oleh pengembang, pengguna, dan pihak-pihak yang tertarik untuk memahami lebih dalam tentang proyek XGrow. serta untuk mengakses informasi teknis, tutorial, dan sumber daya lainnya yang dapat membantu dalam pengembangan perangkat lunak dan teknologi. WikiXGrow ini di buat oleh pengembang XGrow yaitu Grub 10 Section Semaranag, dalam KM AUG23 RevoU x Kemendikbudristek</p>
             </div>
+        </div>
+      </section>
+    <!-- Wiki XGrow  (Akhir) -->
+
+    <!-- Footer (Awal)-->
+      <footer>
+        <div class="footer-container">
+          <div class="socialicons">
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/id-ID/"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/?locale=id_ID"><i class="fa-brands fa-facebook"></i></a>
           </div>
-        </section>
-      <!-- Home (Akhir) -->
-    
+        </div>
+        <div class="footerBottom">
+          <p class="copyright">Copyright &copy;2023; Di buat oleh <span class="designer">Group 10 Semarang</span></p>
+        </div>
+      </footer>
+    <!-- Footer (Akhir)-->
+
     <!-- JS Style -->
     <script>
       // Function Navigasi Bar Smooth (Navbar) (Awal)
@@ -416,7 +449,13 @@
         });
       });
       // Href aktif di A (Navbar) (Akhir)
-    </script>
 
+      // Fungsi ganti page (WikiXGrow) (Awal)
+      function tampilkanHalaman(judul, isi) {
+      const kontenHalamanUtama = document.getElementById('konten-halaman-utama');
+      kontenHalamanUtama.innerHTML = `<h1>${judul}</h1><p>${isi}</p>`; }
+      // Fungsi ganti page (WikiXGrow) (Akhir)
+    
+    </script>
   </body>
 </html>
