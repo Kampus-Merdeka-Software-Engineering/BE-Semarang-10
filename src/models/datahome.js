@@ -46,7 +46,6 @@ const Datahome = {
     }
   },
 
-  // pengguna, mentor, alumni, keberhasilan
   edit: (id, data, callback) => {
     if (!id || !data || (!data.pengguna && !data.mentor && !data.alumni && !data.keberhasilan )) {
       const error = new Error('ID data home dan data diperlukan.');
