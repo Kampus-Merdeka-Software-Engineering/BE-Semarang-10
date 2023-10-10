@@ -3,7 +3,7 @@
 
 # XGrow - Sisi Server (API)
 <p align="center">
-  <img src="https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-10/assets/img/logo.gif" alt="XGrow Logo" width="600px" height="200px">
+  <img src="kampus-merdeka-software-engineering.github.io/FE-Semarang-10/assets/img/logo.gif" alt="XGrow Logo" width="600px" height="200px">
 </p>
 Selamat datang di repositori XGrow sisi server! XGrow adalah platform media pembelajaran online yang berdedikasi untuk meningkatkan keterampilan dan pengetahuan pengguna dalam berbagai bidang pendidikan. Kami merupakan bagian dari Grup 10 Section Semarang RevoU MSIB KM AUG23, dan kami bangga telah merancang dan membangun platform ini untuk memberikan layanan pendidikan berkualitas kepada pengguna.
 <br><br>
@@ -26,11 +26,11 @@ XGrow dibangun menggunakan berbagai teknologi, yaitu sebagai berikut:
 
 ## 🎁 Fitur Utama XGrow
 
-<img src="https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-10/assets/img-readme/1sv.jpg" width="350px" height="200px" align="center" />
+<img src="kampus-merdeka-software-engineering.github.io/FE-Semarang-10/assets/img-readme/1sv.jpg" width="350px" height="200px" align="center" />
 
 - **XGrowDev**: XGrow Developer untuk mengetahui kebutuhan pengembangan XGrow web utama, mencakup repositor Github, EndPoint API dan WikiXGrow
 
-<img src="https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-10/assets/img-readme/2sv.jpg" width="350px" height="200px" align="center" />
+<img src="kampus-merdeka-software-engineering.github.io/FE-Semarang-10/assets/img-readme/2sv.jpg" width="350px" height="200px" align="center" />
 
 - **Telah tersedia beragam data (API)**: XGrow menyediakan berbagai macam data yang di butuhkan XGrow web utama.
 
@@ -51,7 +51,7 @@ Pastikan telah memenuhi syarat berikut sebelum menjalankan aplikasi XGrow Sisi S
 2. Gunakan perintah berikut untuk mengklon repositori XGrow Sisi Server:
 
    ```bash
-   git clone https://github.com/Kampus-Merdeka-Software-Engineering/back-end-capstone-project-section-semarang-group-10.git
+   git clone https://github.com/Kampus-Merdeka-Software-Engineering/BE-Semarang-10.git
    
 3. Pindah ke direktori repositori:
 
@@ -88,7 +88,7 @@ Di bawah ini dua link untuk menuju ke hasil project final XGrow:
 
 | Website              | Link                                               | Keterangan                                                                            |
 |----------------------|----------------------------------------------------|---------------------------------------------------------------------------------------|
-| XGrow                | [Menuju Website](https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-10/) | Link website utama XGrow.|
+| XGrow                | [Menuju Website](https://kampus-merdeka-software-engineering.github.io/FE-Semarang-10/) | Link website utama XGrow.|
 | XGrowDev             | [Menuju Website](https://back-end-capstone-project-section-semarang-group-10.bimamaarschal.repl.co/)| Link website pengembangan XGrow, bagi pengembang untuk mengetahui Endpoint API dan lainnya.|
 
 <br>
@@ -119,8 +119,8 @@ Berikut merupakan link ke halaman Security Policy (kebijakan keamanan) dan Licen
 
 | Menuju Halaman                                           | Keterangan                                   |
 |------------------------------------------------------|----------------------------------------------|
-| [Security Policy](https://github.com/Kampus-Merdeka-Software-Engineering/back-end-capstone-project-section-semarang-group-10/security/policy) | Kebijakan keamanan proyek XGrow.            |
-| [License](https://github.com/Kampus-Merdeka-Software-Engineering/back-end-capstone-project-section-semarang-group-10/blob/main/LICENSE)           | Lisensi yang berlaku untuk proyek XGrow.    |
+| [Security Policy](https://github.com/Kampus-Merdeka-Software-Engineering/BE-Semarang-10/security/policy) | Kebijakan keamanan proyek XGrow.            |
+| [License](https://github.com/Kampus-Merdeka-Software-Engineering/BE-Semarang-10/blob/main/LICENSE)           | Lisensi yang berlaku untuk proyek XGrow.    |
 
 <br>
 
