@@ -3,7 +3,7 @@
 
 # XGrow - Sisi Server (API)
 <p align="center">
-  <img src="kampus-merdeka-software-engineering.github.io/FE-Semarang-10/assets/img/logo.gif" alt="XGrow Logo" width="600px" height="200px">
+  <img src="https://kampus-merdeka-software-engineering.github.io/FE-Semarang-10/assets/img/logo.gif" alt="XGrow Logo" width="600px" height="200px">
 </p>
 Selamat datang di repositori XGrow sisi server! XGrow adalah platform media pembelajaran online yang berdedikasi untuk meningkatkan keterampilan dan pengetahuan pengguna dalam berbagai bidang pendidikan. Kami merupakan bagian dari Grup 10 Section Semarang RevoU MSIB KM AUG23, dan kami bangga telah merancang dan membangun platform ini untuk memberikan layanan pendidikan berkualitas kepada pengguna.
 <br><br>
@@ -26,11 +26,11 @@ XGrow dibangun menggunakan berbagai teknologi, yaitu sebagai berikut:
 
 ## 🎁 Fitur Utama XGrow
 
-<img src="kampus-merdeka-software-engineering.github.io/FE-Semarang-10/assets/img-readme/1sv.jpg" width="350px" height="200px" align="center" />
+<img src="https://kampus-merdeka-software-engineering.github.io/FE-Semarang-10/assets/img-readme/1sv.jpg" width="350px" height="200px" align="center" />
 
 - **XGrowDev**: XGrow Developer untuk mengetahui kebutuhan pengembangan XGrow web utama, mencakup repositor Github, EndPoint API dan WikiXGrow
 
-<img src="kampus-merdeka-software-engineering.github.io/FE-Semarang-10/assets/img-readme/2sv.jpg" width="350px" height="200px" align="center" />
+<img src="https://kampus-merdeka-software-engineering.github.io/FE-Semarang-10/assets/img-readme/2sv.jpg" width="350px" height="200px" align="center" />
 
 - **Telah tersedia beragam data (API)**: XGrow menyediakan berbagai macam data yang di butuhkan XGrow web utama.
 
